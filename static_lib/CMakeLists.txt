@@ -9,9 +9,9 @@ string(REPLACE "__attribute__((visibility(\"default\")))" "__attribute__((visibi
 file(WRITE ${C_HEADER_FILE} "${MODIFIED_C_HEADER_CONTENTS}")
 
 # Set MSVC runtime library
-set(CMAKE_MSVC_RUNTIME_LIBRARY MultiThreaded)
-set(ONNX_USE_MSVC_STATIC_RUNTIME ON)
-set(protobuf_MSVC_STATIC_RUNTIME ON)
+set(CMAKE_MSVC_RUNTIME_LIBRARY MultiThreadedDLL)
+set(ONNX_USE_MSVC_STATIC_RUNTIME OFF)
+set(protobuf_MSVC_STATIC_RUNTIME OFF)
 
 # Set ONNX Runtime options
 set(onnxruntime_BUILD_SHARED_LIB ON)
